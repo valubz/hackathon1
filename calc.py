@@ -27,7 +27,14 @@ def calcular(operacion):
         return "Error: División por cero"
     except Exception as e:
         return f"Error: {e}"
-
+        
+def borrar_consola():
+    sistema = platform.system()
+    if sistema == "Windows":
+        os.system('cls')
+    else:
+        os.system('clear')
+        
 def main():
     while True:
         operacion = input("Introduce una operación (o presiona 'c' para borrar): ")
@@ -38,13 +45,6 @@ def main():
         
         resultado = calcular(operacion)
         print(resultado)
-
-def borrar_consola():
-    sistema = platform.system()
-    if sistema == "Windows":
-        os.system('cls')
-    else:
-        os.system('clear')
 
 if __name__ == "__main__":
     main()
