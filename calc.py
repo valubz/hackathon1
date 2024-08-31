@@ -19,7 +19,7 @@ def dividir(a, b):
         return "Error: División por cero"
 
 
-def calcular(operacion):
+def calculate(operacion):
     try:
 
         return eval(operacion)
@@ -43,7 +43,7 @@ def main():
             borrar_consola()
             continue
         
-        resultado = calcular(operacion)
+        resultado = calculate(operacion)
         print(resultado)
 
 if __name__ == "__main__":
